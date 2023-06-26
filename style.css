@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Merriweather', serif;
-    background-color: #f9fafc;;
+    background-color: #ebf2ff;;
 }
 
 .navbar{
@@ -12,6 +12,7 @@ body{
     align-items: center;
     justify-content: space-around;
     background-color: #fff;
+    height: 100px;
 }
 
 .navbar_brand{
@@ -22,12 +23,13 @@ body{
     width: 100%;
 }
 
-.nav_item:hover{
+.button_primary:hover{
+    /* background-position: linear-gradient(right center); */
     border: 2px solid #FF6767;
     cursor: pointer;
 }
 
-.nav_item{
+.button_primary{
     background-image: linear-gradient(
         to right,
         #ff512f 0%,#dd2476 51%,#ff512f 100%
@@ -39,19 +41,56 @@ body{
     font-weight: 600;
 }
 
+/* for ipad */
 @media (min-width: 768px){
     .navbar{
         justify-content: space-between;
         padding: 10px 30px;
+        
+    }
+    .hero_container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
     }
 }
 
 @media (min-width: 1024px){
+    .hero_container{
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+    }
     .navbar_brand{
         width: 200px;
     }
-    .nav_item{
+    .button_primary{
         padding: 20px;
         font-size: 20px;
     }
+    .hero_description{
+        width: 100%;
+    }
+}
+.hero_img{
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%) ;
+    width: 100%;
+}
+
+.hero_img_container{
+    width: 100%;
+}
+
+.hero_container{
+    padding: 20px;
+    align-items: center;
+}
+
+.hero_text{
+    font-weight: 800;
+    font-size: 30px;
+    margin: 20px 0;
+    color: #1d3557;
 }
